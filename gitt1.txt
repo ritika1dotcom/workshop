@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hotel Template | Designzzz</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.easing.js"></script>
+<script language="javascript" type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+$(document).ready( function(){
+   var buttons = { previous:$('#jslidernews3 .button-previous') ,
+   next:$('#jslidernews3 .button-next') };
+
+   var _complete = function(slider, index){
+   $('#jslidernews3 .slider-description').animate({height:0});
+   slider.find(".slider-description").animate({height:100})
+   };							;
+   $('#jslidernews3').lofJSidernews( { interval : 4000,
+   direction		: 'opacity',
+   easing			: 'easeOutBounce',
+   duration		: 1200,
+   auto		 	: true,
+   mainWidth:900,
+   buttons			: buttons,
+   onComplete:_complete } );
+   });
+   </script>
+</head>
+<html>
+<body>
+<div id="main-container">  <!--all the codes carrying body content -->
+</div>
+</body>
+</html>
+@charset "utf-8";
+ /* CSS Document */
+*{
+   margin:0;
+   padding:0;
+   }
+body
+   {
+   background:url(images/bg.jpg) repeat-x;
+   }
+   article, aside, figure, footer, header, hgroup, menu, nav, section { display:block; }
+   @font-face
+   {
+   font-family: Steiner;
+   src:url("images/Opificio.ttf");
+   }
+   #main-container
+   {
+   width:1000px;
+   overflow:hidden;
+   margin:0 auto;
+   }
+   <header> <!-- Navigarion and Logo -->
+<div class="nav-bg">
+<nav>
+<ul>
+<li><a href="#">Home </a></li>
+<li><a href="#">Hotel </a></li>
+<li><a href="#">Booking </a></li>
+<li><a href="#">Services </a></li>
+<li><a href="#">Events </a></li>
+<li><a href="#">Restaurant </a></li>
+<li><a href="#">Locations </a></li>
+</ul>
+</nav>
+<div id="logo">
+<img src="images/logo.png" alt="" />
+</div>
+</div>
+</header>
+header
+ {
+
+ width:1000px;
+ height:100px;
+ }
+ .nav-bg
+ {
+ background:url(images/nav-bg.png) repeat-x;
+ width:1000px;
+ height:58px;
+ box-shadow: 0px 1px 3px #000;
+ -moz-box-shadow: 0px 1px 3px #000;
+ -webkit-box-shadow: 0px 1px 3px #000;
+ }
+ nav
+ {
+ width:760px;
+ overflow:hidden;
+ float:right;
+ }
+ nav ul
+ {
+ margin:0;
+ padding:0;
+ }
+ nav ul li
+ {
+ font-family:"Opificio";
+ font-size:17px;
+ color:#ffffff;
+ list-style:none;
+ float:left;
+ margin:18px 23px;
+ }
+ nav ul li a
+ {
+ color:#ffffff;
+ text-decoration:none;
+ }
+ nav ul li a:hover
+ {
+ color:#c4c4c4;
+ }
+ #logo
+ {
+ width:206px;
+ height:90px;
+ float:left;
+ margin:2px 11px;
+ }
+ <div id="feature"><!-- slider area -->
+<div id="jslidernews3" class="lof-slidecontent" style="width:900px; height:330px; margin:0 auto;">
+<div class="preload">
+</div>
+<div  class="button-previous">Previous</div>
+<div class="main-slider-content" style="width:900px; height:330px;">
+<ul class="sliders-wrap-inner">
+<li>
+<img src="images/img-1.jpg" alt="" />
+<div class="slider-description">
+<div class="description-wrapper">
+<h4>Some Dummy Text</h4>
+</div>
+</div>
+</li>
+<li>
+<img src="images/img-2.jpg" alt="" />
+<div class="slider-description">
+<div class="description-wrapper">
+<h4>Some Dummy Text</h4>
+</div>
+</div>
+</li>
+<li>
+<img src="images/img-3.jpg" alt="" />
+<div class="slider-description">
+<div class="description-wrapper">
+<h4>Some Dummy Text</h4>
+</div>
+</div>
+</li>
+<li>
+<img src="images/img-4.jpg" alt="" />
+<div class="slider-description">
+<div class="description-wrapper">
+<h4>Some Dummy Text</h4>
+</div>
+</div>
+</li>
+<li>
+<img src="images/img-2.jpg" alt="" />
+<div class="slider-description">
+<div class="description-wrapper">
+<h4>Some Dummy Text</h4>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="button-next">Next</div>
+</div>
+</div>
+CSS of this Area
+#feature
+ {
+ background:#fff;
+ width:925px;
+ overflow:hidden;
+ padding:8px;
+ border-radius:5px;
+ -moz-border-radius: 5px;
+ -webkit-border-radius:5px;
+ margin:0 auto;
+ margin-bottom:30px;
+ }
+ .lof-slidecontent
+ {
+ position:relative;
+ overflow:hidden;
+ border:#F4F4F4 solid 1px;
+ }
+ .lof-slidecontent .preload
+ {
+ height:100%;
+ width:100%;
+ position:absolute;
+ top:0;
+ left:0;
+ z-index:100000;
+ text-align:center;
+ background:#FFF
+ }
+ .lof-slidecontent  ul.sliders-wrap-inner li
+ {
+ overflow:hidden;
+ padding:0px;
+ margin:0px;
+ float:left;
+ position:relative;
+ }
+ .lof-slidecontent  .lof-opacity
+ {
+ width:100%;
+ height:100%;
+ }
+ .lof-slidecontent  .lof-opacity  li
+ {
+ position:absolute!important;
+ top:0;
+ left:0;
+ float:inherit!important;
+ }
+   .lof-slidecontent .slider-description > div
+   {
+   padding:12px;
+ }
+.lof-slidecontent .slider-description
+   {
+   z-index:100px;
+   position:absolute;
+   bottom:0;
+   right:0px;
+   width:100%;
+   border-radius: 5px 5px 5px 5px;
+   background:url(images/slide-bar.png);
+   color:#FFF;
+   }
+   .lof-slidecontent .slider-description h4
+   {
+   font-size: 18px;
+   margin: 10px 0;
+   padding: 0;
+   }
+   .lof-slidecontent  .button-next,
+   .lof-slidecontent .button-previous
+   {
+   display:block;
+   width:40px;
+   color:#FFF;
+   cursor:pointer;
+   position:absolute;
+   height:100%;
+   z-index:40;
+   top:0;
+   text-indent:-999px;
+
+   }
+   .lof-slidecontent   .button-next
+   {
+   right:05px;
+   background:url(images/right-arrow.png) no-repeat right center;
+   }
+   .lof-slidecontent  .button-previous
+   {
+   left:05px;
+   background:url(images/left-arrow.png) no-repeat left center;
+   }
+   <div id="content">
+<div class="block">
+<div class="hd-bg">
+<div class="circle">
+</div>
+<div class="hd">
+<p> Services </p>
+</div>
+<div class="circle">
+</div>
+</div>
+<div class="img">
+<img src="images/img-5.jpg" alt="" />
+</div>
+<div class="write">
+<p>We publish a Photoshop tutorial, in the second article we present the download file and in the last article.</p>
+</div>
+<div class="readmore">
+<p><a href="#"> Read more </a></p>
+</div>
+</div>
+<div class="block">
+<div class="hd-bg">
+<div class="circle">
+</div>
+<div class="hd">
+<p> Events </p>
+</div>
+<div class="circle">
+</div>
+</div>
+<div class="img">
+<img src="images/img-6.jpg" alt="" />
+</div>
+<div class="write">
+<p>We publish a Photoshop tutorial, in the second article we present the download file and in the last article.</p>
+</div>
+<div class="readmore">
+<p><a href="#"> Read more </a></p>
+</div>
+</div>
+<div class="block">
+<div class="hd-bg">
+<div class="circle">
+</div>
+<div class="hd">
+<p> Restaurant </p>
+</div>
+<div class="circle">
+</div>
+</div>
+<div class="img">
+<img src="images/img-7.jpg" alt="" />
+</div>
+<div class="write">
+<p>We publish a Photoshop tutorial, in the second article we present the download file and in the last article.</p>
+</div>
+<div class="readmore">
+<p><a href="#"> Read more </a></p>
+</div>
+</div>
+</div>
+#content
+ {
+ width:960px;
+ height:330px;
+ margin:0 auto;
+ padding:14px 0;
+ }
+ .block
+ {
+ background:#fff;
+ width:266px;
+ height:325px;
+ border-radius:5px;
+ -moz-border-radius: 5px;
+ -webkit-border-radius:5px;
+ margin-left:40px;
+ float:left;
+ box-shadow: 2px 2px 2px -2px #000;
+ -moz-box-shadow: 2px 2px 2px -2px #000;
+ -webkit-box-shadow: 2px 2px 2px -2px #000;
+ }
+ .hd-bg
+ {
+ background:#483e37;
+ width:168px;
+ height:17px;
+ margin:10px 45px;
+ border-radius:10px;
+ -moz-border-radius: 10px;
+ -webkit-border-radius: 10px;
+ padding:17px 4px;
+ }
+ .circle
+ {
+ background:#766254;
+ border-radius:10px;
+ -moz-border-radius: 10px;
+ -webkit-border-radius: 10px;
+ width:15px;
+ height:15px;
+ float:left;
+ }
+ .hd
+ {
+ width:135px;
+ height:25px;
+ float:left;
+ margin:-7px 0;
+ }
+ .hd p
+ {
+ font-family: "Opificio";
+ font-size:25px;
+ color:#fff;
+ text-align:center;
+ }
+ .img
+ {
+ width:239px;
+ height:135px;
+ margin-left:13px;
+ }
+ .write
+ {
+ width:260px;
+ overflow:hidden;
+ }
+ .write p
+ {
+ color:#000;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:14px;
+ margin:5px 19px;
+ text-align:justify;
+ }
+ .readmore
+ {
+ background:url(images/read-bg.jpg);
+ width:103px;
+ height:40px;
+ float:right;
+ margin:5px 7px;
+ border-radius:15px;
+ -moz-border-radius: 15px;
+ -webkit-border-radius:15px;
+ border:2px solid #766254;
+ }
+ .readmore p
+ {
+ font-size:18px;
+ color:#fff;
+ text-align:center;
+ margin-top:8px;
+ }
+ .readmore p a
+ {
+ color:#fff;
+ text-decoration:none;
+ }
+ .readmore p a:hover
+ {
+ color:#960;
+ text-decoration:none;
+ }
+ <div id="content1">
+<div class="block1">
+<div class="welcome">
+<p>Welcome</p>
+</div>
+<div class="image">
+</div>
+<div class="text">
+<p>This is the last tutorial of Real Estate Template series.  As our regular readers know that we always make a series of articles, in the first we publish a Photoshop tutorial, in the second article we present the download file and in the last article, we publish the HTML CSS tutorial. The articles of web design series are published every Friday.</p>
+</div>
+<div class="readmore">
+<p><a href="#"> Read more </a></p>
+</div>
+</div>
+<div class="block2">
+<div class="hd-bg">
+<div class="circle">
+</div>
+<div class="hd">
+<p> Packages </p>
+</div>
+<div class="circle">
+</div>
+</div>
+<div class="offers">
+<div class="main-offer">
+<div class="bullets">
+<img src="images/bullets.png" alt="" />
+</div>
+<div class="package">                       										                                						<p>Business Package  ($745)</p>
+</div>
+</div>
+<div class="main-offer">
+<div class="bullets">
+<img src="images/bullets.png" alt="" />
+</div>
+<div class="package">                       										                                						<p>Time for family  ($452)</p>
+</div>
+</div>
+<div class="main-offer">
+<div class="bullets">
+<img src="images/bullets.png" alt="" />
+</div>
+<div class="package">                       										                                						<p>New Year 2011  ($854)</p>
+</div>
+</div>
+<div class="main-offer">
+<div class="bullets">
+<img src="images/bullets.png" alt="" />
+</div>
+<div class="package">                       										                                						<p>New Year 2012 ($854)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+#content1
+ {
+
+ width:960px;
+ height:240px;
+ margin:0 auto;
+ padding:14px 0;
+ }
+ .block1
+ {
+ background:#f1efef;
+ width:577px;
+ height:230px;
+ border-radius:5px;
+ -moz-border-radius: 5px;
+ -webkit-border-radius:5px;
+ box-shadow:1px 2px 2px 2px #bfbfbf;
+ -moz-box-shadow: 1px 2px 2px 2px #bfbfbf;
+ -webkit-box-shadow: 1px 2px 2px 2px #bfbfbf;
+ margin-left:40px;
+ float:left;
+ }
+ .welcome
+ {
+ color:#d57416;
+ font-family: "Opificio";
+ font-size:28px;
+ margin-left:10px;
+ }
+ .image
+ {
+ background:url(images/img-8.jpg) no-repeat;
+ width:155px;
+ height:135px;
+ margin:5px 8px;
+ float:left;
+ }
+ .text
+ {
+ background:#d9d2ba;
+ width:400px;
+ height:140px;
+ float:left;
+ border-radius:5px;
+ -moz-border-radius: 5px;
+ -webkit-border-radius:5px;
+ }
+ .text p
+ {
+ font-size:14px;
+ margin:13px 6px;
+ line-height:22px;
+ text-align:justify;
+ }
+ .block2
+ {
+ background:#f1efef;
+ float: left;
+ height: 230px;
+ margin-left: 29px;
+ width: 274px;
+ border-radius:5px;
+ box-shadow:1px 2px 2px 2px #bfbfbf;
+ -moz-box-shadow: 1px 2px 2px 2px #bfbfbf;
+ -webkit-box-shadow: 1px 2px 2px 2px #bfbfbf;
+
+ }
+ .offers
+ {
+ background: #d9d2ba;
+ width:253px;
+ height:150px;
+ margin-left:11px;
+ border-radius:5px;
+ -moz-border-radius: 5px;
+ -webkit-border-radius:5px;
+ }
+ .main-offer
+ {
+ width:250px;
+ height:20px;
+ padding:7px 0;
+ }
+ .bullets
+ {
+ width:20px;
+ height:20px;
+ margin:0 12px;
+ float:left;
+ }
+ .package
+ {
+ width:200px;
+ height:20px;
+ float:left;
+ font-style:17px;
+ }
+ <footer>
+<div id="fnav">
+<ul>
+<li><a href="#">Home </a></li>
+<li><a href="#">Hotel </a></li>
+<li><a href="#">Booking </a></li>
+<li><a href="#">Services </a></li>
+<li><a href="#">Events </a></li>
+<li><a href="#">Restaurant </a></li>
+<li><a href="#">Locations </a></li>
+</ul>
+</div>
+<div id="subscribe">
+<p>Subscribe Us</p>
+<div class="icons">
+<img src="images/fb.png" alt="" />
+</div>
+<div class="icons">
+<img src="images/plus.png" alt="" />
+</div>
+<div class="icons">
+<img src="images/rt.png" alt="" />
+</div>
+<div class="icons">
+<img src="images/utube.png" alt="" />
+</div>
+</div>
+<div id="contact">
+<h2> Contact Us </h2>
+<p>7th Sky Heaven Street</p>
+<p>Call Us : 1854654</p>
+</div>
+<div id="cprt">
+<p>2012 © Copyrighted Designzzz.com</p>
+</div>
+</footer>
+CSS of this Area
+footer
+ {
+ background:url(images/footer-bg.png) repeat-x;
+ width:960px;
+ height:140px;
+ margin:0 auto;
+ border-radius:5px;
+ }
+ #fnav
+ {
+ width:705px;
+ height:40px;
+ float:left;
+ }
+ #fnav ul
+ {
+ margin:0px;
+ padding:0px;
+ }
+ #fnav ul li
+ {
+ color: #FFFFFF;
+ float: left;
+ font-size: 16px;
+ font-family: "Opificio";
+ list-style: none outside none;
+ margin:4px 12px;
+ padding: 9px 10px;
+ text-decoration: none;
+ }
+ #fnav ul li a
+ {
+ color:#fff;
+ text-decoration:none;
+ }
+ #fnav ul li a:hover
+ {
+ color:#c4c4c4;
+ }
+ #subscribe
+ {
+
+ width:150px;
+ height:125px;
+ float:right;
+ margin:0 30px;
+ }
+ #subscribe p
+ {
+ font-family:"Opificio";
+ font-size:22px;
+ color:#666;
+ margin:7px 0;
+ }
+ .icons
+ {
+ width:50px;
+ overflow:hidden;
+ margin-left:13px;
+ float:left;
+ }
+ #contact
+ {
+
+ width:180px;
+ height:74px;
+ float:left;
+ padding:5px 10px;
+ }
+ h2
+ {
+ font-family: "Opificio";
+ font-size:16px;
+ color:#666;
+ margin:3px 5px;
+ }
+ #contact p
+ {
+ font-family: "Opificio";
+ font-size:14px;
+ color:#fff;
+ margin:2px 6px;
+ }
+ #cprt
+ {
+ color: #C4C4C4;
+ float: left;
+ font-size: 12px;
+ overflow: hidden;
+ text-align: center;
+ width: 960px;
+ }
